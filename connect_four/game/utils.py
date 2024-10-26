@@ -9,6 +9,9 @@ def get_valid_locations(board):
     return valid_locations
 
 
+print(get_valid_locations)
+
+
 # Evaluate a window of four slots for scoring
 def evaluate_window(window, piece):
     score = 0

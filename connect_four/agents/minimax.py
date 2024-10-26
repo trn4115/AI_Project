@@ -1,8 +1,8 @@
 # agents/minimax.py
 import numpy as np
 import random
-from game.utils import get_valid_locations, score_position
-from game.board import is_terminal_node, winning_move, get_next_open_row, drop_piece
+from game.utils import get_valid_locations, score_position, is_terminal_node
+from game.board import winning_move, get_next_open_row, drop_piece
 
 
 def minimax(board, depth, alpha, beta, maximizingPlayer):

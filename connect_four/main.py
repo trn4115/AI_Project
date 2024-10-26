@@ -2,10 +2,10 @@
 from game.board import (
     create_board,
     drop_piece,
-    is_valid_location,
     get_next_open_row,
     print_board,
     winning_move,
+    is_valid_location,
 )
 from agents.random_agent import random_agent_move
 from agents.minimax import minimax
@@ -31,7 +31,7 @@ def main():
                 row = get_next_open_row(board, col)
                 drop_piece(board, row, col, 1)
                 if winning_move(board, 1):
-                    print("Random Agent Wins!")
+                    print("Player 1 (Random Agent) Wins!")
                     game_over = True
 
         # Player 2 (Q-Learning Agent)
@@ -42,7 +42,7 @@ def main():
                 row = get_next_open_row(board, col)
                 drop_piece(board, row, col, 2)
                 if winning_move(board, 2):
-                    print("Q-Learning Agent Wins!")
+                    print("Player 2 (Q-Learning Agent) Wins!")
                     game_over = True
                 next_state = str(board)
                 q_agent.learn(
